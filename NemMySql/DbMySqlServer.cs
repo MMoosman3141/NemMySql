@@ -2,7 +2,7 @@
 using NemDbCore;
 
 namespace NemMySql {
-  public class DbMySqlServer : DbBase<MySqlCommand, MySqlConnection, MySqlDataReader, DbMySqlServerSettings> {
+  public class DbMySqlServer : DbBase<MySqlCommand, MySqlConnection, MySqlDataReader, MySqlParameter, DbMySqlServerSettings> {
     public DbMySqlServer() : base() { }
     public DbMySqlServer(DbMySqlServerSettings settings) : base(settings) {
     }
@@ -17,6 +17,5 @@ namespace NemMySql {
 
       return connection;
     }
-
   }
 }
